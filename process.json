@@ -5,36 +5,36 @@
     "process" : [
         {
             "process_idx" : "0",
-            "burst_time" : "10",
+            "burst_time" : "4",
             "arrival_time" : "0",
             "priority" : "3"
         },
         {
             "process_idx" : "1",
-            "burst_time" : "1",
+            "burst_time" : "5",
             "arrival_time" : "1",
-            "priority" : "1"
+            "priority" : "2"
 
         },
         {
             "process_idx" : "2",
-            "burst_time" : "2",
+            "burst_time" : "8",
             "arrival_time" : "2",
-            "priority" : "4"
+            "priority" : "2"
 
         },
         {
             "process_idx" : "3",
-            "burst_time" : "1",
+            "burst_time" : "7",
             "arrival_time" : "3",
-            "priority" : "5"
+            "priority" : "1"
 
         },
         {
             "process_idx" : "4",
-            "burst_time" : "5",
+            "burst_time" : "3",
             "arrival_time" : "3",
-            "priority" : "2"
+            "priority" : "3"
 
         }
         
