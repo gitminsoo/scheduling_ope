@@ -73,6 +73,7 @@ def Priority_RR(process,quantum):
             # 멀티레벨 내의 인덱스로 지정한다
             if(run_idx == -1):
                 run_idx = 0
+                res[multi_que[step][run_idx]] = running_time
             
             print(multi_que[step][run_idx])
             
@@ -84,27 +85,33 @@ def Priority_RR(process,quantum):
             # 퀀텀 기준 시간도 하나씩 늘린다
             quantum_check = quantum_check +1
             
+            if(left_time[multi_que[step][run_idx]]==0):
+                term[multi_que[step][run_idx]] = running_time
+            
             # 퀀텀 시간을 전부 채워 한 경우
             if(quantum_check % quantum == 0):
                 # 퀀텀을 0으로 돌려준다
-                quantum_check = 0
+                quantum_check = 0    
+                
                 # 해당 스텝의 범위를 보면서 만약
                 # 실행시간이 남은 프로세스가 있으면 런스테이트를 넘긴다
                 for i in range(0,len(multi_que[step])):
                     if(multi_que[step][(run_idx + i+1)%(len(multi_que[step]))] > 0):
                         run_idx = (run_idx +1)%(len(multi_que[step]))
-                        
+                        if(res[multi_que[step][run_idx]] == -1):
+                            res[multi_que[step][run_idx]] = running_time
                         break
             
             # 런 스테이트가 시간을 다 한 경우
             if(left_time[multi_que[step][run_idx]]==0):
+                
                 # 퀀텀을 0으로 돌려준다
                 quantum_check = 0
                 for i in range(0,len(multi_que[step])):
                     if(multi_que[step][(run_idx + i+1)%(len(multi_que[step]))] > 0):
                         run_idx = (run_idx +1)%(len(multi_que[step]))
-
-                        
+                        if(res[multi_que[step][run_idx]] == -1):
+                            res[multi_que[step][run_idx]] = running_time
                         break
             # f_check를 이용하여 해당 step의 
             # 프로세스가 모두 끝났는지 확인한다
@@ -119,21 +126,10 @@ def Priority_RR(process,quantum):
             f_check = 0
             
     print(running_time)
+    print(res)
+    print(term)
                     
-                
-                
-                        
-                    
-                
-            
-        
-                
-    
-        
-        
-        
-        
-    
+
      
    
    
