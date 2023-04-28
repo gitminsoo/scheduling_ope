@@ -1,0 +1,44 @@
+{
+    "preemptive":{
+        "preemptive":"non_preemptive"
+    },
+    "process" : [
+        {
+            "process_idx" : "0",
+            "burst_time" : "10",
+            "arrival_time" : "0",
+            "priority" : "3"
+        },
+        {
+            "process_idx" : "1",
+            "burst_time" : "1",
+            "arrival_time" : "1",
+            "priority" : "1"
+
+        },
+        {
+            "process_idx" : "2",
+            "burst_time" : "2",
+            "arrival_time" : "2",
+            "priority" : "4"
+
+        },
+        {
+            "process_idx" : "3",
+            "burst_time" : "1",
+            "arrival_time" : "3",
+            "priority" : "5"
+
+        },
+        {
+            "process_idx" : "4",
+            "burst_time" : "5",
+            "arrival_time" : "3",
+            "priority" : "2"
+
+        }
+        
+    ]
+    
+    
+}
